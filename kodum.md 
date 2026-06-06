@@ -1,0 +1,51 @@
+def main():
+
+    gecmis = []
+
+    print("Hesap Makinesi")
+    print("Çıkmak için 'q' ya basın, geçmişi görmek için 'h' ya basın.")
+
+    while True:
+        giriş = input("Birinci sayıyı girin veya (çıkmak için q, geçmişi görmek için h) basın : ")
+
+        if giriş.lower() == 'q':
+            print("Hesap makinesinden çıkılıyor.")
+            break
+        elif giriş.lower() == 'h':
+            if len (gecmis) == 0:
+                print("Geçmiş boş.")
+            else:
+                print("Geçmiş:")
+                for islem in gecmis:
+                    print(islem)
+                continue
+        try:
+            sayi1 = float(giriş) 
+            ifade = input("İşlem seçin (+, -, *, /): ")
+            sayi2 = float(input("İkinci sayıyı girin : "))
+
+            sonuç = 0
+            if ifade == '+':
+                sonuç = sayi1 + sayi2
+            elif ifade == '-':
+                sonuç = sayi1 - sayi2
+            elif ifade == '*':
+                sonuç = sayi1 * sayi2
+            elif ifade == '/':
+                if sayi2 == 0:
+                    print("Hata: Sıfıra bölme yapılamaz.")
+                    continue
+                sonuç = sayi1 / sayi2
+            else:
+                print("Geçersiz işlem seçimi.")
+
+
+            print(f"Sonuç: {sonuç}")
+            kayıt = f"{sayi1} {ifade} {sayi2} = {sonuç}"
+            gecmis.append(kayıt)
+
+        except ValueError:
+            print("Geçersiz giriş. Lütfen sayıları doğru formatta girin.") 
+
+if __name__ == "__main__":
+    main()

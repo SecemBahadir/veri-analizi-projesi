@@ -1,0 +1,4 @@
+Java ve C++ öğrenmeye artık gerek yok.
+Ardunio öğrenmeye gerek yok.
+Sizce artık programlama öğrenmeye gerek var mı ?
+Vibe Coding mi öğrenmek daha mantıklı olur ?

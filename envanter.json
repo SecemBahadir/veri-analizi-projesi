@@ -1,0 +1,93 @@
+[
+    {
+        "ad": "Makarna",
+        "kategori": "Kuru Gıda ",
+        "fiyat": 50.0,
+        "stok": 120,
+        "birim": "Adet"
+    },
+    {
+        "ad": "Gofret",
+        "kategori": "Atıştırmalık",
+        "fiyat": 25.5,
+        "stok": 58,
+        "birim": "Adet"
+    },
+    {
+        "ad": "Meyve Suyu",
+        "kategori": "Atıştırmalık",
+        "fiyat": 32.0,
+        "stok": 75,
+        "birim": "Adet"
+    },
+    {
+        "ad": "Elma",
+        "kategori": "Taze Gıda",
+        "fiyat": 25.0,
+        "stok": 25,
+        "birim": "KG"
+    },
+    {
+        "ad": "Armut",
+        "kategori": "Taze Gıda",
+        "fiyat": 55.0,
+        "stok": 15,
+        "birim": "KG"
+    },
+    {
+        "ad": "Muz",
+        "kategori": "Taze Gıda",
+        "fiyat": 70.0,
+        "stok": 17.0,
+        "birim": "KG"
+    },
+    {
+        "ad": "Şeftali",
+        "kategori": "Taze Gıda",
+        "fiyat": 120.0,
+        "stok": 15,
+        "birim": "KG"
+    },
+    {
+        "ad": "Nektari",
+        "kategori": "Taze Gıda",
+        "fiyat": 90.0,
+        "stok": 10,
+        "birim": "KG"
+    },
+    {
+        "ad": "Erik",
+        "kategori": "Taze Gıda",
+        "fiyat": 200.0,
+        "stok": 5,
+        "birim": "KG"
+    },
+    {
+        "ad": "Çilek",
+        "kategori": "Taze Gıda",
+        "fiyat": 160.0,
+        "stok": 5.0,
+        "birim": "KG"
+    },
+    {
+        "ad": "Cips",
+        "kategori": "Atıştırmalık",
+        "fiyat": 55.0,
+        "stok": 80,
+        "birim": "Adet"
+    },
+    {
+        "ad": "Mantı",
+        "kategori": "Kuru Gıda",
+        "fiyat": 35.0,
+        "stok": 46,
+        "birim": "Adet"
+    },
+    {
+        "ad": "Kablolu Kulaklık",
+        "kategori": "Elektronik",
+        "fiyat": 140.0,
+        "stok": 30,
+        "birim": "Adet"
+    }
+]
