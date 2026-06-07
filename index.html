@@ -7800,7 +7800,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [66]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
@@ -7810,10 +7810,8 @@ a.anchor-link {
 <span class="kn">import</span><span class="w"> </span><span class="nn">plotly.io</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pio</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
 
-<span class="c1"># Plotly grafiklerinin HTML çıktısında düzgün gömülmesi için varsayılan ayar</span>
 <span class="n">pio</span><span class="o">.</span><span class="n">renderers</span><span class="o">.</span><span class="n">default</span> <span class="o">=</span> <span class="s2">"notebook"</span>
 
-<span class="c1"># Görsel stil ayarları</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="s2">"whitegrid"</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s2">"figure.figsize"</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
 </pre></div>
@@ -7826,17 +7824,15 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [67]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
-<span class="c1"># 1. 'data' klasörünü otomatik olarak oluşturuyoruz</span>
 <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s2">"data"</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
-<span class="c1"># 2. Ödev kriterlerine uygun (350 satır, 6 sütun) örnek bir veri seti üretiyoruz</span>
 <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
 <span class="n">satir_sayisi</span> <span class="o">=</span> <span class="mi">350</span>
 <span class="n">kategoriler</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Elektronik"</span><span class="p">,</span> <span class="s2">"Giyim"</span><span class="p">,</span> <span class="s2">"Ev &amp; Yaşam"</span><span class="p">,</span> <span class="s2">"Kozmetik"</span><span class="p">,</span> <span class="s2">"Kitap"</span><span class="p">]</span>
@@ -7845,19 +7841,15 @@ a.anchor-link {
     <span class="s2">"musteri_id"</span><span class="p">:</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1001</span><span class="p">,</span> <span class="mi">1001</span> <span class="o">+</span> <span class="n">satir_sayisi</span><span class="p">),</span>
     <span class="s2">"yas"</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">satir_sayisi</span><span class="p">),</span>
     <span class="s2">"kategori"</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">kategoriler</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">satir_sayisi</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="p">[</span><span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">]),</span>
-    <span class="c1"># DÜZELTME: np.random.round yerine doğrudan np.round yazarak hatayı çözdük</span>
     <span class="s2">"fiyat"</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">4000</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">satir_sayisi</span><span class="p">),</span> <span class="mi">2</span><span class="p">),</span>
     <span class="s2">"miktar"</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">satir_sayisi</span><span class="p">)</span>
 <span class="p">}</span>
 
 <span class="n">df_taslak</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">veri</span><span class="p">)</span>
-<span class="c1"># Toplam harcama sütununu ekleyelim</span>
 <span class="n">df_taslak</span><span class="p">[</span><span class="s2">"harcama"</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_taslak</span><span class="p">[</span><span class="s2">"fiyat"</span><span class="p">]</span> <span class="o">*</span> <span class="n">df_taslak</span><span class="p">[</span><span class="s2">"miktar"</span><span class="p">]</span>
 
-<span class="c1"># Ödevdeki 'eksik değer incelemesi' kriteri için rastgele 5 satırın yaş bilgisini boş (NaN) bırakalım[cite: 1]</span>
 <span class="n">df_taslak</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_taslak</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="s2">"yas"</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
 
-<span class="c1"># Veriyi csv olarak kaydedelim[cite: 1]</span>
 <span class="n">df_taslak</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">"data/veri_seti.csv"</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">"utf-8"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">" 'data' klasörü ve 350 satırlık 'veri_seti.csv' başarıyla oluşturuldu!"</span><span class="p">)</span>
 </pre></div>
@@ -7883,25 +7875,20 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [68]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Veri setinin bilgisayarındaki yerini belirtiyoruz (Göreceli dosya yolu)</span>
-<span class="n">dosya_yolu</span> <span class="o">=</span> <span class="s2">"data/veri_seti.csv"</span> 
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">dosya_yolu</span> <span class="o">=</span> <span class="s2">"data/veri_seti.csv"</span> 
 
 <span class="k">try</span><span class="p">:</span>
-    <span class="c1"># Türkçe karakter sorununu önlemek için encoding='utf-8' ayarıyla yüklüyoruz</span>
     <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">dosya_yolu</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">"utf-8"</span><span class="p">)</span> 
     <span class="nb">print</span><span class="p">(</span><span class="s2">" Veri seti başarıyla yüklendi!"</span><span class="p">)</span>
     
-    <span class="c1"># Ödev kriteri: Verinin boyutunu (satır/sütun sayısı) ekrana yazdırıyoruz</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Boyut Bilgisi: </span><span class="si">{</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> satır, </span><span class="si">{</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2"> sütun</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
     
-    <span class="c1"># Verinin ilk 5 satırını tablo olarak inceliyoruz</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"--- Verinin İlk 5 Satırı ---"</span><span class="p">)</span>
     <span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
     
-    <span class="c1"># Eksik (boş) değerleri kontrol ediyoruz</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">--- Eksik Değer Kontrolü ---"</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
     
@@ -8029,25 +8016,21 @@ dtype: int64
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [69]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># 1. Genel Tanımsal İstatistik Özeti (Merkezi eğilim ve yayılım ölçüleri)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">" Sayısal Değişkenlerin Tanımsal İstatistik Özeti:"</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">" Sayısal Değişkenlerin Tanımsal İstatistik Özeti:"</span><span class="p">)</span>
 <span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">())</span>
 
-<span class="c1"># 2. Kategorik Değişkenlerin Dağılımı (Frekans ve Yüzde hesabı)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2"> Kategori Bazlı Dağılım (Müşteri Frekansı ve Yüzdesi):"</span><span class="p">)</span>
 <span class="n">frekans</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">"kategori"</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
 <span class="n">yuzde</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">"kategori"</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">normalize</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
 <span class="n">display</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">"Frekans"</span><span class="p">:</span> <span class="n">frekans</span><span class="p">,</span> <span class="s2">"Yüzde (%)"</span><span class="p">:</span> <span class="n">yuzde</span><span class="p">}))</span>
 
-<span class="c1"># 3. Gruplandırılmış İstatistikler (Ürün kategorilerine göre harcama alışkanlıkları)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2"> Ürün Kategorilerine Göre Harcama Ortalama ve Standart Sapmaları:"</span><span class="p">)</span>
 <span class="n">grup_ozet</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">"kategori"</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s2">"harcama"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"mean"</span><span class="p">,</span> <span class="s2">"std"</span><span class="p">],</span> <span class="s2">"miktar"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"sum"</span><span class="p">,</span> <span class="s2">"count"</span><span class="p">]})</span>
 <span class="n">display</span><span class="p">(</span><span class="n">grup_ozet</span><span class="p">)</span>
 
-<span class="c1"># 4. Değişkenler Arası Korelasyon Matrisi (Harcama, yaş, fiyat ilişkisi)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2"> Sayısal Değişkenler Arası Doğrusal İlişki (Korelasyon):"</span><span class="p">)</span>
 <span class="n">korelasyon</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">)</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
 <span class="n">display</span><span class="p">(</span><span class="n">korelasyon</span><span class="p">)</span>
@@ -8415,11 +8398,10 @@ dtype: int64
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [70]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># 1. Grafik: Histogram </span>
-<span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">"yas"</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"skyblue"</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">"yas"</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"skyblue"</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"Müşteri Yaş Dağılımı"</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">"Yaş"</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">"Frekans"</span><span class="p">)</span>
@@ -8458,11 +8440,10 @@ Histogram incelendiğinde, mağazadan alışveriş yapan müşterilerin yaş da�
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [75]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># 2. Grafik:</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">"kategori"</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">"harcama"</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">"kategori"</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s2">"Set2"</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">"kategori"</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">"harcama"</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">"kategori"</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s2">"Set2"</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"Ürün Kategorilerine Göre Harcama Dağılımları"</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -8500,11 +8481,10 @@ Kutu grafiği (Boxplot) incelendiğinde, ürün kategorilerinin harcama bazında
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [72]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># 3. Grafik:</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">)</span><span class="o">.</span><span class="n">corr</span><span class="p">(),</span> <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">"coolwarm"</span><span class="p">,</span> <span class="n">center</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">)</span><span class="o">.</span><span class="n">corr</span><span class="p">(),</span> <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">"coolwarm"</span><span class="p">,</span> <span class="n">center</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"Değişkenlerin Korelasyon Matrisi"</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
@@ -8541,11 +8521,10 @@ Korelasyon ısı haritası (Heatmap) incelendiğinde, toplam harcama tutarı ile
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [73]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># 4. Grafik:</span>
-<span class="n">fig1</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">"kategori"</span><span class="p">)[</span><span class="s2">"miktar"</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(),</span> 
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">fig1</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">"kategori"</span><span class="p">)[</span><span class="s2">"miktar"</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(),</span> 
             <span class="n">x</span><span class="o">=</span><span class="s2">"kategori"</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">"miktar"</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">"Kategorilere Göre Toplam Satılan Ürün Adedi"</span><span class="p">,</span>
             <span class="n">labels</span><span class="o">=</span><span class="p">{</span><span class="s2">"miktar"</span><span class="p">:</span> <span class="s2">"Toplam Satış Adedi"</span><span class="p">,</span> <span class="s2">"kategori"</span><span class="p">:</span> <span class="s2">"Ürün Kategorisi"</span><span class="p">},</span>
             <span class="n">color</span><span class="o">=</span><span class="s2">"kategori"</span><span class="p">)</span>
@@ -12499,11 +12478,10 @@ Plotly ile çizdirilen etkileşimli çubuk grafik incelendiğinde, adet bazında
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [74]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># 5. Grafik:</span>
-<span class="n">fig2</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">"fiyat"</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">"harcama"</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"kategori"</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="s2">"miktar"</span><span class="p">,</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">fig2</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">"fiyat"</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">"harcama"</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"kategori"</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="s2">"miktar"</span><span class="p">,</span>
                 <span class="n">title</span><span class="o">=</span><span class="s2">"Ürün Fiyatı ve Toplam Harcama İlişkisi (Miktar Boyutlu)"</span><span class="p">,</span>
                 <span class="n">labels</span><span class="o">=</span><span class="p">{</span><span class="s2">"fiyat"</span><span class="p">:</span> <span class="s2">"Ürün Fiyatı (TL)"</span><span class="p">,</span> <span class="s2">"harcama"</span><span class="p">:</span> <span class="s2">"Toplam Sepet Harcaması (TL)"</span><span class="p">})</span>
 <span class="n">fig2</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
